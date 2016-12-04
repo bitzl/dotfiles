@@ -93,7 +93,10 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'pure'
-source $HOME/dotfiles/windows/settings.zsh
+if grep -q Microsoft /proc/sys/kernel/osrelease; then
+  printf "Setting up Bash on Ubuntu on Windows specific configuration.\n"
+  source $HOME/dotfiles/windows/settings.zsh
+fi
 
 #
 # Ruby
