@@ -1,7 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-if [ "$[$(date +%s) - $(stat -c %Z /var/lib/apt/periodic/update-success-stamp)]" -ge 600000 ]; then
-  apt-get update
-fi
-
-sudo apt-get -y install most tmux zsh
+sudo apt-get -y install htop most tmux tree zsh
