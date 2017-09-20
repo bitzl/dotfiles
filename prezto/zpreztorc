@@ -170,4 +170,7 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
-export PATH="$PATH:$HOME/.local/bin"
+# Setup histdb
+source "${HOME}/dotfiles/lib/zsh-histdb/sqlite-history.zsh"
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd  histdb-update-outcome
