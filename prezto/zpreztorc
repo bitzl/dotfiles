@@ -175,3 +175,14 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 source "${HOME}/dotfiles/lib/zsh-histdb/sqlite-history.zsh"
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd  histdb-update-outcome
+
+source "${HOME}/dotfiles/environment.zsh"
+
+PURE_PROMPT_SYMBOL=λ
+
+path+=('/usr/local/go/bin')
+path+=('/home/marcus/go/bin')
+export PATH="${PATH}:$(python3 -m site --user-base)/bin"
+export PATH="${HOME}/development/flutter/bin:$PATH"
+
+export GOPATH="${HOME}/go"
