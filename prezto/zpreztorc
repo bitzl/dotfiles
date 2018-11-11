@@ -95,6 +95,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'pure'
+PURE_PROMPT_SYMBOL='λ'
 
 #
 # Ruby
@@ -172,6 +173,6 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # Setup histdb
-source "${HOME}/dotfiles/lib/zsh-histdb/sqlite-history.zsh"
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd  histdb-update-outcome
+# source "${HOME}/dotfiles/lib/zsh-histdb/sqlite-history.zsh"
+# autoload -Uz add-zsh-hook
+# add-zsh-hook precmd  histdb-update-outcome
